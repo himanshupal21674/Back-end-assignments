@@ -1,0 +1,69 @@
+
+
+1.  What is a NoSQL Database, and explain the types of NoSQL database?
+Ans-> NoSQL:
+      It stands for Not a Structured Query Language.
+      A NoSQL database is a non-relational database designed to handle a variety of data models including key-value, document, columnar, and graph formats.
+      Types of NoSQL Database:
+      Document-oriented databases: Store data as documents (e.g., MongoDB).
+      Key-value stores: Store data as key-value pairs (e.g., Redis).
+      Column-family stores: Store data in columns and rows (e.g., Cassandra).
+      Graph databases: Store data in nodes, edges, and properties to represent and store data (e.g., Neo4j).
+
+2.  What is the difference between SQL and NoSQL databases?
+Ans-> Data Model: SQL databases are table-based, whereas NoSQL databases can be document-based, key-value pairs, graph databases, or wide-column stores.
+      Schema: SQL databases use a fixed schema with tables and rows, while NoSQL databases use a dynamic schema for unstructured data.
+      Scalability: SQL databases are typically vertically scalable, whereas NoSQL databases are horizontally scalable.
+      Transactions: SQL databases support ACID transactions, while NoSQL databases typically support eventual consistency (BASE).
+
+
+3.  How to choose between MongoDB and MySQL based on your requirements?
+Ans->  Choose MongoDB when:
+       You need to handle large volumes of unstructured data.
+       Your application requires high flexibility and scalability.
+       You need a dynamic schema.
+       
+      Choose MySQL when:
+      Your data is structured and relational.
+      You need ACID compliance and complex queries.
+      You require robust transactional support.
+
+4.  What are collections and documents in a MongoDB database?
+Ans-> ANS: In MongoDB, a collection is a group of documents. A document is a set of key-value pairs, similar to JSON objects, that contain data. Collections do not enforce a schema, allowing for flexible data models.
+
+5.  What is BSON? What is the difference between BSON and JSON?
+Ans-> BSON (Binary JSON) is a binary representation of JSON-like documents. The differences are:
+
+      BSON is binary-encoded, making it more efficient for storage and traversal.
+      BSON supports more data types than JSON, including dates and raw binary data.
+      BSON includes length prefixes, which makes it easier to scan and traverse.
+
+6.  What are MongoDB Compass and MongoDB Shell used for?
+Ans->SON (Binary JSON) is a binary representation of JSON-like documents. The differences are:
+
+BSON is binary-encoded, making it more efficient for storage and traversal.
+BSON supports more data types than JSON, including dates and raw binary data.
+BSON includes length prefixes, which makes it easier to scan and traverse.
+
+7.  How to create collections in MongoDB?
+Ans->: Collections in MongoDB are created implicitly when you insert a document into a collection that does not yet exist. You can also create collections explicitly using the createCollection method.
+
+8.  What is the difference between insertMany and insertOne?
+Ans->insertMany: Inserts multiple documents into a collection at once.
+insertOne: Inserts a single document into a collection.
+
+9.  What is the difference between deleteOne and deleteMany?
+Ans->deleteOne: Deletes the first document that matches the given filter criteria.
+deleteMany: Deletes all documents that match the given filter criteria.
+
+10. How to read data in MongoDB? What is the difference between find and findOne?
+Ans->
+Use the find method to retrieve multiple documents that match a query.
+Use the findOne method to retrieve a single document that matches a query.
+find returns a cursor to the documents, while findOne returns the first matching document.
+
+11. What is $set in MongoDB?
+Ans->The $set operator in MongoDB is used to update specific fields of a document. If the field does not exist, it will be created.
+
+12. How to filter data using MongoDB?
+Ans->You can filter data in MongoDB using query operators in the `find` method. For example, to filter documents where the age is greater than 25, you can use: `db.collection.find({ age: { $gt: 25 } })`.
